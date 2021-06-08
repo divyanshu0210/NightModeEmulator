@@ -1,0 +1,185 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+
+    <title></title>
+<meta name="viewport"  content="width=device-width ,initial-scale=1">
+<link rel="stylesheet" href="./over.css">
+<link rel="stylesheet" href="./switch.css">
+<link rel="stylesheet" href="./snackbar.css">
+<link rel="stylesheet" href="./slider.css">
+<link rel="stylesheet" href="./footer.css">
+
+
+
+
+<style>
+/*
+#show1{
+
+color:blue;
+}
+
+*/
+</style>
+   
+</head>
+
+
+
+<body >
+
+
+
+
+
+<div   id="NightBar">
+
+
+<!--   Switch     -->
+<span id="switch1">  <!--  id just used for hiding and showing switck    -->
+<label class="switch">
+  <input id="check" type="checkbox" >
+  <span class="slider round"></span>
+</label>
+</span>
+<!--   Switch  ends     -->
+
+
+
+
+<!--   button for  nightmode    -->
+
+<button type="button"  id="night_mode_on">Adjust Darkness</button>
+
+
+<!--
+<button type="button"  id="night_mode_off">Turn off the night mode</button>
+-->
+
+<button type="button"  id="slideHide" >Hide Adjuster</button>
+
+
+
+</div>
+
+
+<!--   Main slider feature      -->
+
+<div id="slidecontainer" class="transiable" >
+<div  >
+  <input type="range" min="1" max="100" value="50" class="vslider" id="myRange">
+</div>
+
+<div id="DarknessViewer">
+<p >Darkness:  <span id="demo"></span>%</p>
+<p   style="font-size:50%;">Use 'Hide Adjuster' button or Click Anywhere on your Screen to Hide Slider</p>
+</div>
+
+</div>
+
+<!--   Main slider feature ends     -->
+
+
+
+
+
+<!--  Snackbar starts      -->
+
+<div id="snackbar">Dark Mode On</div>
+
+<!--   Snackbar ends     -->
+
+
+
+
+
+
+
+
+<!--   this is the div element  by which color changes    -->
+<div   id="over"></div>
+
+
+<!--   Main body of the page can come here    -->
+
+<div  id="container_to_show">
+<hr>
+<p  class="item"  id="show1" >Hello!!!        </p>
+
+<p  class="item"  id="show2" >Welcome to this tool</p>
+<p  class="item"  id="show3" >Dark Mode Emulator</p>
+<p>Use the switch above to turn on/off Dark Mode.   Explore!!!</p>
+<p  class="item"  id="show4" >Any feedbacks and suggestions are welcome</p>
+
+</div>
+
+
+<div class="footer1 footer2 " >
+
+
+<p>This feature is under developement</p>
+<p>Contact : divyanshu2102002agarwal@gmail.com</p>
+
+
+</div>
+
+
+
+<script  >
+
+
+
+
+</script>
+<!--
+<script src="./merge.js"></script>
+
+-->
+
+<!--   nightmode   -->
+
+<script   src="./night_mode.js"></script>
+
+
+
+<!--   snackbar   -->
+<script   src="./snackbar.js"></script>
+
+
+
+<!--    only slider will be controlled independent of overlay div tag
+
+<script   src="./slider.js"></script>
+
+-->
+
+
+<!--   only overlay div will be controlled independent of the slider 
+
+<script   src="./over.js"></script>
+
+-->
+
+
+<!--   controller of the nightmode combining propertoes of 
+      overlay and slider        -->
+<script   src="./adjuster.js"></script>
+
+
+<script   src="./testing.js"></script>
+
+<script   src="./hideSlider.js"></script>
+<!--
+<script   src="./magic.js"></script>   -->
+
+
+
+
+
+
+
+</body>
+</html>

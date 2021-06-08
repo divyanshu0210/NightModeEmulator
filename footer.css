@@ -1,0 +1,36 @@
+
+
+
+.footer1{
+	
+/*    grid-area : footer ;   */
+/*	  align-self:flex-end;  */
+    box-sizing:border-box;
+	height: 75px;
+	text-align: center;
+	font-size:50%;
+	font-weight:bold;
+	padding : 0px;
+	width:100%;
+	background-color:powderblue;
+	border: 2px solid black;
+	/*   display:block;
+	width: 100%;
+
+	postion:fixed;
+	margin-top:95vh;
+	*/
+	}
+	
+	
+		.footer2{
+			/*	align-self: flex-end;  */
+   position: fixed;
+
+             left:0; 
+  	      bottom:0;   
+	/*
+	position: relative;
+	margin-top: 10px;
+	*/
+	}
