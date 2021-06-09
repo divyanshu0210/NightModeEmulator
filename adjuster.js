@@ -19,6 +19,9 @@ var output = document.getElementById("demo");
 var r = document.querySelector(':root');
    var p=document.getElementById("DarknessViewer");  
 var  font = document.getElementById("container_to_show");  
+
+//var  font = document.querySelectorAll("div#container_to_show   span");  
+
  /* var color=p.style.color;   */
 var limit = 80;   //set limit after which alert is shown
 var checkValue =0 ;   // used to control alert 
@@ -42,7 +45,7 @@ ESelectorPropValToNew("div#container_to_show   p"  , "rgb(255, 255, 255)"  , "bl
 		else if (this.value == limit)
 			{
 			if (this.value > checkValue){
-			window.alert("  On increasing Darkness Background Visbility will Decrease .Only Text will be Visible !!");
+			window.alert("  On increasing Darkness Background Visibility will Decrease .Text will be Still Visible .Black Text will appear White !!");
 			}
 			}
 
