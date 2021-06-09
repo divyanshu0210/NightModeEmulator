@@ -2,7 +2,7 @@
 
 	--rgba : 0.5;
 	
-	
+	--container_rgba : 1;
 
 }
 /*
@@ -15,6 +15,7 @@ box-sizing :border-box;
 #container_to_show{
 	position:relative;  /* added self for z-index  */
 	z-index:  -5;
+	color: rgba(255,0,0,var(--container_rgba))
 }
 
 

@@ -33,7 +33,7 @@ color:blue;
 
 
 
-
+<!--  switvhes and buttons are palced inside it    -->
 
 <div   id="NightBar">
 
@@ -50,7 +50,7 @@ color:blue;
 
 
 
-<!--   button for  nightmode    -->
+<!--   buttons for  nightmode    -->
 
 <button type="button"  id="night_mode_on">Adjust Darkness</button>
 
@@ -59,9 +59,17 @@ color:blue;
 <button type="button"  id="night_mode_off">Turn off the night mode</button>
 -->
 
+
+<!-- button to hide slider -->
 <button type="button"  id="slideHide" >Hide Adjuster</button>
+<!--           -->
 
 
+
+
+
+<!--   Slider  to adjust darkness  and changing and 
+displaying darkness value         -->
 
 </div>
 
@@ -72,7 +80,7 @@ color:blue;
 <div  >
   <input type="range" min="1" max="100" value="50" class="vslider" id="myRange">
 </div>
-
+<!--      Darknrss value viewer     -->
 <div id="DarknessViewer">
 <p >Darkness:  <span id="demo"></span>%</p>
 <p   style="font-size:50%;">Use 'Hide Adjuster' button or Click Anywhere on your Screen to Hide Slider</p>
@@ -88,7 +96,7 @@ color:blue;
 
 <!--  Snackbar starts      -->
 
-<div id="snackbar">Dark Mode On</div>
+<div id="snackbar">       </div>
 
 <!--   Snackbar ends     -->
 
@@ -96,17 +104,22 @@ color:blue;
 
 
 
-
-
-
 <!--   this is the div element  by which color changes    -->
+<!--      overlay     -->
 <div   id="over"></div>
+<!--           -->
+
+
+
+
+
 
 
 <!--   Main body of the page can come here    -->
 
 <div  id="container_to_show">
-<hr>
+<hr>     <!--   just a line to seperate 
+Dark mode switch from main content         -->
 <p  class="item"  id="show1" >Hello!!!        </p>
 
 <p  class="item"  id="show2" >Welcome to this tool</p>
@@ -116,7 +129,7 @@ color:blue;
 
 </div>
 
-
+<!--  fixed footer at bottom            -->
 <div class="footer1 footer2 " >
 
 
@@ -134,6 +147,8 @@ color:blue;
 
 
 </script>
+
+
 <!--
 <script src="./merge.js"></script>
 
@@ -143,11 +158,14 @@ color:blue;
 
 <script   src="./night_mode.js"></script>
 
+<!--           -->
+
+
 
 
 <!--   snackbar   -->
 <script   src="./snackbar.js"></script>
-
+<!--           -->
 
 
 <!--    only slider will be controlled independent of overlay div tag
@@ -155,6 +173,8 @@ color:blue;
 <script   src="./slider.js"></script>
 
 -->
+
+
 
 
 <!--   only overlay div will be controlled independent of the slider 
@@ -168,10 +188,18 @@ color:blue;
       overlay and slider        -->
 <script   src="./adjuster.js"></script>
 
-
+<!--      funcrioning of switch      -->
 <script   src="./testing.js"></script>
+<!--           -->
 
+
+
+<!--   tom    hide adjustor/ slider    -->
 <script   src="./hideSlider.js"></script>
+
+<!--           -->
+
+
 <!--
 <script   src="./magic.js"></script>   -->
 
