@@ -20,12 +20,13 @@ var r = document.querySelector(':root');
    var p=document.getElementById("DarknessViewer");  
 var  font = document.getElementById("container_to_show");  
  /* var color=p.style.color;   */
-var limit = 80;
-var checkValue =0 ;
+var limit = 80;   //set limit after which alert is shown
+var checkValue =0 ;   // used to control alert 
+var currentValue;
 slider.oninput = function(){
 	output.innerHTML = this.value;
 	  r.style.setProperty('--rgba',this.value/100);
-
+     currentValue= this.value;
 		 if (this.value >51 && this.value< limit ){
 	
 			checkValue=  0   ;
@@ -35,7 +36,7 @@ slider.oninput = function(){
 	//  p.style.zIndex ="3";
 	
 	font.style.zIndex ="-5";
-	
+ESelectorPropValToNew("div#container_to_show   p"  , "rgb(255, 255, 255)"  , "black"   );	
 		}    
 		
 		else if (this.value == limit)
@@ -47,12 +48,15 @@ slider.oninput = function(){
 
 	else if(this.value> limit){
 		
-		 checkValue = this.value- (1/2);
+		 checkValue = this.value- (1/2);   // very important line
 		
 		font.style.zIndex ="3";
 		/*  font.style.setProperty('--container_rgba'  , 1)  ;   */
 		
 		p.style.color="white";
+		
+		
+		ESelectorPropValToNew("div#container_to_show   p"  , "rgb(0, 0, 0)"  , "white"   );
 		
 		}
 		
@@ -64,6 +68,8 @@ slider.oninput = function(){
 	/*	p.style.zIndex="-5";   */
 	  
 	font.style.zIndex ="-5";
+	
+	ESelectorPropValToNew("div#container_to_show   p"  , "rgb(255, 255, 255)"  , "black"   );
 	
 	}   
 	

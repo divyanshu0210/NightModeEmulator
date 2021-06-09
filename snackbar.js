@@ -16,7 +16,13 @@ function snackbar(string) {
 x.className.replace("show", ""); }, 3000);
 }
 
-/*
+/*  
+
+the problem for whicch this was written is solved by accepting 
+an arguement in the snackbar function so that functuon for each differte
+snackbar ia not needed. 
+
+//USELESS CODE 
 
 function snackbar2() {
   // Get the snackbar DIV

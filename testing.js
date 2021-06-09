@@ -37,11 +37,29 @@ x.before= function(){
     over.style.display = "block";
     showButton( );
     snackbar("Dark Mode On" );
-  } else {
+
+	if (  currentValue > limit   )
+		{
+			ESelectorPropValToNew("div#container_to_show   p"  , "rgb(0, 0, 0)"  , "white"   );
+		
+		}
+    
+
+
+  } 
+	
+		
+			else {
     over.style.display = "none";
     snackbar("Dark Mode Off");
     hideSlideBar( );
     hideButton( );
     hideHide( );
+
+if (     currentValue> limit   ){
+	ESelectorPropValToNew("div#container_to_show   p"  , "rgb(255, 255, 255)"  , "black" );
+	
+		}
+    
   }
 }
