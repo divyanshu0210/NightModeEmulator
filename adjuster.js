@@ -17,8 +17,27 @@ var output = document.getElementById("demo");
 
 
 var r = document.querySelector(':root');
-   var p=document.getElementById("DarknessViewer");  
+var p=document.getElementById("DarknessViewer");  
 var  font = document.getElementById("container_to_show");  
+
+var x = document.querySelectorAll("div#container_to_show p	");
+var i;
+var background = [  ]   ; 
+var color = [  ]  ; 
+for ( i=0; i < x.length; i++){
+
+ var  style = window.getComputedStyle(x[  i ]);
+
+
+// var element = document.getElementById('image_1');
+  
+  background[  i  ]  = style.getPropertyValue('background');
+  color[  i  ]  = style.getPropertyValue('color');
+   
+}
+
+  
+
 
 //var  font = document.querySelectorAll("div#container_to_show   span");  
 
@@ -39,7 +58,15 @@ slider.oninput = function(){
 	//  p.style.zIndex ="3";
 	
 	font.style.zIndex ="-5";
-ESelectorPropValToNew("div#container_to_show   p"  , "rgb(255, 255, 255)"  , "black"   );	
+// ESelectorPropValToNew("div#container_to_show   p"  , "rgb(255, 255, 255)"  , "black"   );	
+	
+		for (i = 0; i < x.length; i++) {
+  x[i].style.background = background[  i ] ;
+  x[  i  ].style.color = color[  i  ] ; 
+}
+
+			
+				
 		}    
 		
 		else if (this.value == limit)
@@ -58,8 +85,20 @@ ESelectorPropValToNew("div#container_to_show   p"  , "rgb(255, 255, 255)"  , "bl
 		
 		p.style.color="white";
 		
+	
 		
 		ESelectorPropValToNew("div#container_to_show   p"  , "rgb(0, 0, 0)"  , "white"   );
+		
+		
+for (i = 0; i < x.length; i++) {
+  x[i].style.backgroundColor = "rgba(0, 0, 0, var(--rgba)/10)";
+}
+		
+		
+		
+		
+		
+		
 		
 		}
 		
@@ -73,6 +112,14 @@ ESelectorPropValToNew("div#container_to_show   p"  , "rgb(255, 255, 255)"  , "bl
 	font.style.zIndex ="-5";
 	
 	ESelectorPropValToNew("div#container_to_show   p"  , "rgb(255, 255, 255)"  , "black"   );
+
+	for (i = 0; i < x.length; i++) {
+  x[i].style.background = background[  i ] ;
+    x[  i  ].style.color = color[  i  ] ; 
+}
+
+	
+	
 	
 	}   
 	
