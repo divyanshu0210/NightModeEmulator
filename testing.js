@@ -14,16 +14,14 @@ x.before= function(){
 	
 	getElementById("over").style.display= "block";
 	
-	
 	};
 	
 	*/
+	
 	document.getElementById("check").addEventListener("click",function(){
 		
-		
 		myFunction();
-		
-		
+			
 		});
 	
 	function myFunction() {
@@ -37,11 +35,11 @@ x.before= function(){
     over.style.display = "block";
     showButton( );
     snackbar("Dark Mode On" );
-
+     index( );
 	if (  currentValue > limit   )
 		{
 			ESelectorPropValToNew("div#container_to_show   p"  , "rgb(0, 0, 0)"  , "white"   );
-		
+		appearInDark(  );
 		}
     
 
@@ -58,7 +56,7 @@ x.before= function(){
 
 if (     currentValue> limit   ){
 	ESelectorPropValToNew("div#container_to_show   p"  , "rgb(255, 255, 255)"  , "black" );
-	
+	original( );
 		}
     
   }

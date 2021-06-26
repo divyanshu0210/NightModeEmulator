@@ -8,25 +8,56 @@ var output = document.getElementById("demo");
 
 	/*
 		
-			slider.oninput = function() {
+   slider.oninput = function() {
   output.innerHTML = this.value;
+   }
+
+    */
+
+
+//variables declared
+
+var i ; 
+var r = document.querySelector(':root');
+var dv=document.getElementById("DarknessViewer");  
+var  font = document.getElementById("container_to_show");  
+var divp= document.querySelectorAll("div#container_to_show p	");
+
+// function for restoring original conditin
+function original(  ){
+
+for (i = 0; i < divp.length; i++) {
+  divp[i].style.background = background[  i ] ;
+  divp[  i  ].style.color = color[  i  ] ; 
+}
 }
 
-*/
+
+//function for appearing in dark
+function appearInDark(  ){
+
+for (i = 0; i < divp.length; i++) {
+divp[i].style.backgroundColor = "rgba(0, 0, 0, var(--rgba)/10)";
+divp[i ].style.zIndex="3";
+/*    this snippet can be used for changing color of any particular background
+
+  if(   background[ i ]  == ""  )  {
+   ESelectorPropValToNew("div#container_to_show   p"  , "rgb(0, 0, 0)"  , "white"   );
+		}
+		*/
+}
+
+}
 
 
-
-var r = document.querySelector(':root');
-var p=document.getElementById("DarknessViewer");  
-var  font = document.getElementById("container_to_show");  
-
-var x = document.querySelectorAll("div#container_to_show p	");
-var i;
+//code in place of propExtractor( ) in merge.js
+/*
+var divp= document.querySelectorAll("div#container_to_show p	");
 var background = [  ]   ; 
 var color = [  ]  ; 
-for ( i=0; i < x.length; i++){
+for ( i=0; i < divp.length; i++){
 
- var  style = window.getComputedStyle(x[  i ]);
+ var  style = window.getComputedStyle(divp[  i ]);
 
 
 // var element = document.getElementById('image_1');
@@ -37,36 +68,37 @@ for ( i=0; i < x.length; i++){
 }
 
   
+*/
+
+//storing original color and background of required elements
+var background = propExtractor(   "div#container_to_show p"  , "background"  );
+var color = propExtractor(   "div#container_to_show p"  , "color"  );
 
 
-//var  font = document.querySelectorAll("div#container_to_show   span");  
-
- /* var color=p.style.color;   */
 var limit = 80;   //set limit after which alert is shown
 var checkValue =0 ;   // used to control alert 
 var currentValue;
+
 slider.oninput = function(){
 	output.innerHTML = this.value;
 	  r.style.setProperty('--rgba',this.value/100);
      currentValue= this.value;
-		 if (this.value >51 && this.value< limit ){
+
+	 if (this.value >51 && this.value< limit ){
 	
 			checkValue=  0   ;
 			
-	  /*    showText(p);     */
-	p.style.color="white";
-	//  p.style.zIndex ="3";
+	     /*    showText(p);     */
+		dv.style.color="white";
+		
+		//  p.style.zIndex ="3";
+		//font.style.zIndex ="1";
+ 		index(  );
+		// ESelectorPropValToNew("div#container_to_show   p"  , "rgb(255, 255, 255)"  , "black"   );	
 	
-	font.style.zIndex ="-5";
-// ESelectorPropValToNew("div#container_to_show   p"  , "rgb(255, 255, 255)"  , "black"   );	
-	
-		for (i = 0; i < x.length; i++) {
-  x[i].style.background = background[  i ] ;
-  x[  i  ].style.color = color[  i  ] ; 
-}
-
-			
-				
+		//setting the  original backgorund and color of para elements
+		original(  );
+		
 		}    
 		
 		else if (this.value == limit)
@@ -80,52 +112,29 @@ slider.oninput = function(){
 		
 		 checkValue = this.value- (1/2);   // very important line
 		
-		font.style.zIndex ="3";
+		//font.style.zIndex ="3";
 		/*  font.style.setProperty('--container_rgba'  , 1)  ;   */
 		
-		p.style.color="white";
-		
-	
-		
-		ESelectorPropValToNew("div#container_to_show   p"  , "rgb(0, 0, 0)"  , "white"   );
-		
-		
-for (i = 0; i < x.length; i++) {
-  x[i].style.backgroundColor = "rgba(0, 0, 0, var(--rgba)/10)";
-}
-		
-		
-		
-		
-		
-		
-		
+		dv.style.color="white";
+    	ESelectorPropValToNew("div#container_to_show   p"  , "rgb(0, 0, 0)"  , "white"   );
+	appearInDark(  );
 		}
 		
 	else{
 		
 		checkValue =0;
-	
-		p.style.color= "black";
+		dv.style.color= "black";
 	/*	p.style.zIndex="-5";   */
-	  
-	font.style.zIndex ="-5";
-	
+	  //	font.style.zIndex ="1";
+	index(  );
 	ESelectorPropValToNew("div#container_to_show   p"  , "rgb(255, 255, 255)"  , "black"   );
-
-	for (i = 0; i < x.length; i++) {
-  x[i].style.background = background[  i ] ;
-    x[  i  ].style.color = color[  i  ] ; 
-}
-
 	
-	
-	
+	//setting the  original backgorund and color of para elements
+	original(   );
+		
 	}   
 	
-	
-
-	};
+		};
 	
 	
 	

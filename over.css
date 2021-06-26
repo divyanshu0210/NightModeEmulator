@@ -14,11 +14,15 @@ box-sizing :border-box;
 
 #container_to_show{
 	position:relative;  /* added self for z-index  */
-	z-index:  -5;
+/*  z-index:  1;       */
 	color: rgba(255,0,0,var(--container_rgba))
 }
 
+#container_to_show p,a{
 
+position:relative;
+
+}
 
 #NightBar{
 
