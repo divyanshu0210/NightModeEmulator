@@ -14,6 +14,10 @@
 
 
 
+<link rel="stylesheet" href="./AdvanceNav/nav.css" >
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="./AdvanceNav/scrollToTop.css" >
+
 <style>
 
 #show1{
@@ -106,7 +110,7 @@ displaying darkness value         -->
 
 
 <!--   Main slider feature      -->
-
+<div id="dimaag" >
 <div id="slidecontainer" class="transiable" >
 <div  >
   <input type="range" min="1" max="100" value="50" class="vslider" id="myRange">
@@ -115,8 +119,12 @@ displaying darkness value         -->
 <div id="DarknessViewer">
 <p >Darkness:  <span id="demo"></span>%</p>
 <p   style="font-size:50%;">Use 'Hide Adjuster' button or Click Anywhere on your Screen to Hide Slider</p>
+<!--
+<hr>  --> <!--   just a line to seperate 
+Dark mode switch from main content         -->
 </div>
 
+</div>
 </div>
 
 <!--   Main slider feature ends     -->
@@ -149,8 +157,8 @@ displaying darkness value         -->
 <!--   Main body of the page can come here    -->
 
 <div  id="container_to_show">
-<hr>     <!--   just a line to seperate 
-Dark mode switch from main content         -->
+
+<div  id="manual"   >
 <p  class="item"  id="show1" >Hello!!!        </p>
 <p>Between</p>
 <p  class="item"  id="show2" >Welcome to this tool</p>
@@ -162,7 +170,7 @@ Dark mode switch from main content         -->
 
 <button type="button"  id="btnc" onclick="innerHTML='Clicked'">Click</button>
 <a  href="https://m.youtube.com/"   >Youtube</a>
-
+</div>
 
 
 <!--
@@ -170,11 +178,106 @@ Dark mode switch from main content         -->
 <span>Hmm</span>
 -->
 
+<div  id="container" >
 
+<div  id="outIcon">
+<a href="javascript:void(0);  "id="icon" onclick="showTab()">
+   <span><i class="fa fa-bars"></i></span>
+  </a>
+<p style="display:inline;">Subjects</p>
+</div>
+<!-- Tab links -->
+<div id="tab">
+<!--
+<span class="topright"onclick="this.parentElement.style.display='none'">x</span>
+-->
+
+
+<!--
+<button class="tablinks" onclick="openCity(event)">London</button>
+  <button class="tablinks" onclick="openCity(event)">Paris</button>
+  <button class="tablinks" onclick="openCity(event)">Tokyo</button>
+-->
+
+  <button class="tablinks" onclick="openCity(event, 'London')">London</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+
+</div>
+
+<!-- Tab content -->
+<div id="London" class="tabcontent scrollable"  onscroll='scrolled("London")'   >
+
+<span class="topright" >x</span>
+
+ <p class="heading">London </p>
+  <p>London is the capital city of England.Lorem ipsum dolor sit amet, consectetur adipiscing 
+elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+ minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+ consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+ deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+ sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+ dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur 
+sint occaecat cupidatat non proident, sunt in culpaLorem ipsum dolor sit amet, consectetur adipiscing 
+elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+ minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+ consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+ deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+ sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+ dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur 
+sint occaecat cupidatat non proident, sunt in culpa</p>
+
+</div>
+
+<div id="Paris" class="tabcontent scrollable"  onscroll='scrolled("Paris")'>
+
+
+
+<span class="topright" >x</span>
+
+   <p class="heading">Paris </p>
+  <p>Paris is the capital of France.Lorem ipsum dolor sit amet, consectetur adipiscing 
+elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+ minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+ consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+ deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+ sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+ dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur 
+sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
 </div>
 
 
+<div id="Tokyo" class="tabcontent scrollable"     onscroll='scrolled("Tokyo")'  >
+
+<span class="topright"  >x</span>
+  
+ <p class="heading">Tokyo </p>
+  <p>Tokyo is the capital of Japan.</p>
+
+</div>
+
+</div>
+	
+
+<button onclick="topFunction()" id="myBtn" title="Go to top"><strong>^</strong></button>
+
+<div id="containerLast" > 
+<p>
+byyfugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+ deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+ sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+ dolor in reprehenderit in voluptate
+
+</p>
+</div>
 
 <!--  fixed footer at bottom            -->
 <div class="footer1 footer2 " >
@@ -185,6 +288,12 @@ Dark mode switch from main content         -->
 
 
 </div>
+
+
+</div>
+
+
+
 
 
 
@@ -268,6 +377,7 @@ Dark mode switch from main content         -->
 for defining the actions perfirmed bt the button
 <script src="button.js" ></script>
 -->
+<script src="./AdvanceNav/nav.js"></script>
 
 
 </body>

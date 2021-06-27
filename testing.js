@@ -20,11 +20,11 @@ x.before= function(){
 	
 	document.getElementById("check").addEventListener("click",function(){
 		
-		myFunction();
+		activator();
 			
 		});
 	
-	function myFunction() {
+	function activator() {
   // Get the checkbox
   var checkBox = document.getElementById("check");
   // Get the output text

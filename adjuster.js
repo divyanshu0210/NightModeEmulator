@@ -21,7 +21,13 @@ var i ;
 var r = document.querySelector(':root');
 var dv=document.getElementById("DarknessViewer");  
 var  font = document.getElementById("container_to_show");  
-var divp= document.querySelectorAll("div#container_to_show p	");
+var divp= document.querySelectorAll("div#container_to_show p 	");
+
+//var divp= document.querySelectorAll("div#container_to_show p , #container_to_show div	");
+
+//var divp= document.querySelectorAll(" *	");
+var divspan= document.querySelectorAll("div#container_to_show divspan	");
+var border= document.getElementsByTagName("div");
 
 // function for restoring original conditin
 function original(  ){
@@ -31,7 +37,6 @@ for (i = 0; i < divp.length; i++) {
   divp[  i  ].style.color = color[  i  ] ; 
 }
 }
-
 
 //function for appearing in dark
 function appearInDark(  ){
@@ -47,9 +52,17 @@ divp[i ].style.zIndex="3";
 		*/
 }
 
+for( i=0 ; i<divspan.length ; i++ ){
+divspan[ i ].style.zIndex="3";
+
 }
+/*
+for (i =0; i< border.length ; i++){
+border[  i ].style.borderColor="white";
 
+}   */
 
+}
 //code in place of propExtractor( ) in merge.js
 /*
 var divp= document.querySelectorAll("div#container_to_show p	");
@@ -117,7 +130,7 @@ slider.oninput = function(){
 		
 		dv.style.color="white";
     	ESelectorPropValToNew("div#container_to_show   p"  , "rgb(0, 0, 0)"  , "white"   );
-	appearInDark(  );
+	appearInDark( );
 		}
 		
 	else{
@@ -130,7 +143,7 @@ slider.oninput = function(){
 	ESelectorPropValToNew("div#container_to_show   p"  , "rgb(255, 255, 255)"  , "black"   );
 	
 	//setting the  original backgorund and color of para elements
-	original(   );
+	original(  );
 		
 	}   
 	

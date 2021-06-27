@@ -12,10 +12,23 @@ box-sizing :border-box;
 
 }     */
 
+#manual{
+
+	border:1px solid black;
+   padding : 3px; 
+  border-radius: 5px;
+margin-bottom:30px;
+}
+
 #container_to_show{
 	position:relative;  /* added self for z-index  */
 /*  z-index:  1;       */
-	color: rgba(255,0,0,var(--container_rgba))
+	color: rgba(255,0,0,var(--container_rgba));
+	
+	margin-top:50px;
+	
+	
+
 }
 
 #container_to_show p,a{
@@ -24,10 +37,31 @@ position:relative;
 
 }
 
+#containerLast{
+background-color:blue;
+	margin-bottom:110px;
+	
+	border:1px solid black;
+   padding : 3px; 
+  border-radius: 5px;
+color:white;
+	
+
+
+}
+
 #NightBar{
 
 /*   border : 1px solid black;  */
 margin-bottom: 10px;
+position:fixed;
+top:5px;
+z-index:4;
+width:96%;
+background-color: rgba(88,88,88,1);
+padding:3px;
+border:none;
+border-radius:5px;
 
 }
 
@@ -47,15 +81,31 @@ z-index: 2;  /*Specify a stack order in case you're using a different order for 
 }
 
 
+
+#dimaag{
+	border: 1px solid black;
+	border-radius:5px;
+	padding:0px;
+
+position:fixed;
+top:50px;
+z-index:4;
+display:block;
+width:96%;
+background-color: rgba(152,152,152);
+
+}
+
 #DarknessViewer{
-position:relative;
-z-index :3;
+/*position:relative;  */
+z-index :4;
+
 
 }
 
 #night_mode_on, #slideHide{
 	position:relative;   /* added self for z-index  */
-z-index:  3;
+z-index:  4;
 display : none;     /* dont change*/
 padding : 7px;
 

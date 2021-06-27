@@ -2,7 +2,8 @@
 function showSlideBar( ){
  
 	var slideBar = document.getElementById("slidecontainer");
-
+	var mainDiv= document.getElementById("container_to_show");
+  mainDiv.style.marginTop="180px";  
 /*    want to show without transition  */
 //slideBar.style.display="block";
 
@@ -13,6 +14,8 @@ slideBar.style.maxHeight = slideBar.scrollHeight + "px"  ;
 function  hideSlideBar( ){
  
 	var slideBar = document.getElementById("slidecontainer");
+	var mainDiv= document.getElementById("container_to_show");
+	mainDiv.style.marginTop="50px";
 /*  hide when dont want transition  Also switch on display
  property of slidecontainer in slider.css    */
 			//slideBar.style.display="none";
@@ -98,8 +101,22 @@ var hide= document.getElementById("slideHide");
 
 
 }
+/*
+function distance( ){
+var mainDiv= document.getElementById("container_to_show");
+if(    mainDiv.style.marginTop !="180px"   ){
+	
+	mainDiv.style.marginTop="180px";
+	}
+else if(        mainDiv.style.marginTop=="180px"    ){
+
+mainDiv.style.marginTop="50px";
+
+}
 
 
+}
+*/
 
 /*
 
@@ -139,11 +156,13 @@ if(rang == "white "){
 // activate mode on pressing button
 var button = document.getElementById("night_mode_on");
 
+
 //var slider = document.getElementsByClass("transiable");
 
 button.addEventListener("click", function (){
 	
-	
+	//	distance(  );
+		
 	
 	if(over.style.display="none")
 		{

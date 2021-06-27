@@ -89,15 +89,22 @@ var   extractedProp= style.getPropertyValue(property);
 
 function index(   ){
 
-var bl= document.querySelectorAll(  "div#container_to_show button "   );
-var p =  document.querySelectorAll(  "div#container_to_show p "   );
+var bl= document.querySelectorAll(  "#container_to_show button "   );
+var p =  document.querySelectorAll(  "#container_to_show p "   );
 var links = document.querySelectorAll(  "div#container_to_show a "   );
+var span= document.querySelectorAll(  "div#container_to_show span "   );
+ var myBtn= document.getElementById("myBtn" );
+
 for ( i=0; i < bl.length; i++){
-	//bl[ i ].style.position="absolute";
+	
+	if(   bl[  i  ]  !=  myBtn     ){
+	bl[ i ].style.position="relative";
 	bl[  i  ].style.zIndex= "3";
 //	bl[ i ].style.opacity= " 0.5";
+}
 		
 	}
+
 	
 for ( i=0; i < links.length; i++){
 //	p[ i ].style.position="relative";
@@ -106,11 +113,19 @@ for ( i=0; i < links.length; i++){
 	}
 	
 for ( i=0; i < p.length; i++){
-//	p[ i ].style.position="relative";
+ p[ i ].style.position="relative";
 	p[  i  ].style.zIndex= "1";
 	
 	}
 	
+	for ( i=0; i < span.length; i++){
+ span[ i ].style.position="relative";
+	span[  i  ].style.zIndex= "3";
+	
+	}
+	
+	
+
 
 
 }
