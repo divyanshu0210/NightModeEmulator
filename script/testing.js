@@ -35,11 +35,18 @@ x.before= function(){
     over.style.display = "block";
     showButton( );
     snackbar("Dark Mode On" );
-     index( );
+     
+   beforeLimit(  );
+var bl= document.querySelectorAll(  "#container_to_show button "   );
+	for ( i=0; i < bl.length; i++){
+	  bl[ i ].style.opacity= " 0.5" ;
+	
+	}
 	if (  currentValue > limit   )
 		{
 			ESelectorPropValToNew("div#container_to_show   p"  , "rgb(0, 0, 0)"  , "white"   );
-		appearInDark(  );
+		
+		afterLimit(  );
 		}
     
 
@@ -53,6 +60,9 @@ x.before= function(){
     hideSlideBar( );
     hideButton( );
     hideHide( );
+ 	
+	opaqToOne(  );
+
 
 if (     currentValue> limit   ){
 	ESelectorPropValToNew("div#container_to_show   p"  , "rgb(255, 255, 255)"  , "black" );
